@@ -1,6 +1,44 @@
 <html>
   <head>
   <style>
+    
+    /* Navigation bar */
+.navbar {
+  background-color:  #003300; /*#333;*/
+  overflow: hidden; /* Hide overflow */
+ 
+}
+/* Navigation bar links */
+.navbar a {
+  float: right; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white;
+  text-align: center;
+  padding: 14px 20px; /* Adds padding??? idk */
+  text-decoration: none; /* No underline??? */
+}
+  
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #99cc00; /*#86b300; /*#d9ff66;/*#b3ff66; /*#ddd; (put this in comments)Grey background color */
+  color: black; /* Black text color */
+}
+
+.header {
+  /*background: #1abc9c;
+  background-image: url("https://www.pollen.com/Content/articles/info/what-is-allergy.jpg");*/
+  background-image: url("https://www.pollen.com/Content/articles/info/ai-grass-pollens.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 50px; /* tbh idk */
+  text-align: center;
+}
+.header h1 { /* Font size of the header gets bigger */
+  font-size: 40px;
+}
+    
+    
   /* Bordered form */
 form {
   border: 3px solid #f1f1f1;
@@ -132,6 +170,18 @@ span.psw {
   </style>
   </head>
   <body>
+    <div class="navbar">
+     <a href="#">About Us</a>
+     <a href="#">Home</a>
+</div>  
+<div class="header">
+    <h1>Lynnwood High School Confessions</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR1B6SRVM7y63x9iyeZzmAk-L3manmSv48pjQVFmM_3qDBIcMoCQ">
+    <h3>A site for LHS students to post confessions</h3>
+  
+    </div>
+    
+    
   <!-- Button to open the modal login form -->
 <button onclick="document.getElementById('id01').style.display='block'">Login</button>
 
