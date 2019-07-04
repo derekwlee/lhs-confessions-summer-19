@@ -7,7 +7,7 @@
     
     /* Navigation bar */
 .navbar {
-  background-color:  #003300; /*#333;*/
+  background-color:  #000; /*#333;*/
   overflow: hidden; /* Hide overflow */
  
 }
@@ -177,11 +177,11 @@ span.psw {
   
     </div>
     
-    
+<button onclick="document.getElementbyId('id02').style.display='block'">Sign Up to Access LHS Confessions! (dw it's free)</button>
   <!-- Button to open the modal login form -->
-<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+<button onclick="document.getElementById('id01').style.display='block'">Or Login If You've Created an Account!</button>
 
-<!-- The Modal -->
+<!-- The Login Modal -->
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" 
 class="close" title="Close Modal">&times;</span>
@@ -207,6 +207,38 @@ class="close" title="Close Modal">&times;</span>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+    
+    
+<!-- The Sign-Up Modal -->
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" 
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <img src="https://bit.ly/30ayvam" alt="Avatar" class="avatar" width="40px" height="40px">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Sign Up</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
@@ -238,11 +270,17 @@ class="close" title="Close Modal">&times;</span>
 </form>
 // Get the modal
 var modal = document.getElementById('id01');
+var modal2= document.getElementById('id02');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
   }
 }
 </script>
